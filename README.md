@@ -3,6 +3,19 @@ About r-shades-feedstock
 
 Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/r-shades-feedstock/blob/main/LICENSE.txt)
 
+
+About r-shades
+--------------
+
+Home: https://github.com/jonclayden/shades
+
+Package license: BSD_3_clause
+
+Summary: Functions for easily manipulating colours, creating colour scales and calculating colour distances.
+
+About r-shades
+--------------
+
 Home: https://github.com/jonclayden/shades
 
 Package license: BSD_3_clause
@@ -40,31 +53,73 @@ conda config --add channels conda-forge
 conda config --set channel_priority strict
 ```
 
-Once the `conda-forge` channel has been enabled, `r-shades` can be installed with `conda`:
+How to use
+----------
+
+<details>
+<summary>With conda</summary>
 
 ```
 conda install r-shades
 ```
 
-or with `mamba`:
+</details>
+
+<details>
+<summary>With mamba</summary>
 
 ```
 mamba install r-shades
 ```
 
-It is possible to list all of the versions of `r-shades` available on your platform with `conda`:
+</details>
+
+<details>
+<summary>With pixi</summary>
+
+```
+# for adding to your local project
+pixi add r-shades
+# for installing globally
+pixi global install r-shades
+```
+
+</details>
+
+Search package versions
+-----------------------
+
+It is possible to list all of the versions of `r-shades` available on your platform:
+
+<details>
+<summary>With conda</summary>
 
 ```
 conda search r-shades --channel conda-forge
 ```
 
-or with `mamba`:
+</details>
+
+<details>
+<summary>With mamba</summary>
 
 ```
 mamba search r-shades --channel conda-forge
 ```
 
-Alternatively, `mamba repoquery` may provide more information:
+</details>
+
+<details>
+<summary>With pixi</summary>
+
+```
+pixi search r-shades --channel conda-forge
+```
+
+</details>
+
+<details>
+<summary>With mamba repoquery, which may provide more information</summary>
 
 ```
 # Search all versions available on your platform:
@@ -76,6 +131,8 @@ mamba repoquery whoneeds r-shades --channel conda-forge
 # List dependencies of `r-shades`:
 mamba repoquery depends r-shades --channel conda-forge
 ```
+
+</details>
 
 
 About conda-forge
