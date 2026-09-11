@@ -3,19 +3,6 @@ About r-shades-feedstock
 
 Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/r-shades-feedstock/blob/main/LICENSE.txt)
 
-
-About r-shades
---------------
-
-Home: https://github.com/jonclayden/shades
-
-Package license: BSD-3-Clause
-
-Summary: Functions for easily manipulating colours, creating colour scales and calculating colour distances.
-
-About r-shades
---------------
-
 Home: https://github.com/jonclayden/shades
 
 Package license: BSD-3-Clause
