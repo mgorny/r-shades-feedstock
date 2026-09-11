@@ -9,7 +9,7 @@ About r-shades
 
 Home: https://github.com/jonclayden/shades
 
-Package license: BSD_3_clause
+Package license: BSD-3-Clause
 
 Summary: Functions for easily manipulating colours, creating colour scales and calculating colour distances.
 
@@ -18,7 +18,7 @@ About r-shades
 
 Home: https://github.com/jonclayden/shades
 
-Package license: BSD_3_clause
+Package license: BSD-3-Clause
 
 Summary: Functions for easily manipulating colours, creating colour scales and calculating colour distances.
 
