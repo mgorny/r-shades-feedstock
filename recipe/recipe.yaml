@@ -1,0 +1,55 @@
+schema_version: 1
+
+context:
+  version: "1.5.0"
+
+package:
+  name: r-shades
+  version: ${{ version|replace("-", "_") }}
+
+source:
+  url:
+    - ${{ cran_mirror }}/src/contrib/shades_${{ version }}.tar.gz
+    - ${{ cran_mirror }}/src/contrib/Archive/shades/shades_${{ version }}.tar.gz
+  sha256: 848398c2e1c10e9c95582841867bb3d1143ff8495047fab03313fe239feed2ac
+
+build:
+  number: 0
+  noarch: generic
+  script:
+    env:
+      DISABLE_AUTOBREW: "1"
+    content:
+      - if: unix
+        then: $R CMD INSTALL --build .
+        else: "\"%R%\" CMD INSTALL --build ."
+  dynamic_linking:
+    rpaths:
+      - lib/R/lib/
+      - lib/
+
+requirements:
+  host:
+    - r-base
+  run:
+    - r-base
+
+tests:
+  - script:
+      - if: not win
+        then: $R -e "library('shades')"
+      - if: win
+        then: "\"%R%\" -e \"library('shades')\""
+
+about:
+  license: BSD-3-Clause
+  summary: Functions for easily manipulating colours, creating colour scales and calculating colour distances.
+  license_file:
+    - ${{ PREFIX }}/lib/R/share/licenses/BSD_3_clause
+    - LICENCE
+  homepage: https://github.com/jonclayden/shades
+
+extra:
+  recipe-maintainers:
+    - conda-forge/r
+
