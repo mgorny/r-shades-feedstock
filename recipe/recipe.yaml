@@ -36,10 +36,7 @@ requirements:
 
 tests:
   - script:
-      - if: not win
-        then: $R -e "library('shades')"
-      - if: win
-        then: "\"%R%\" -e \"library('shades')\""
+      - R -e "library('shades')"
 
 about:
   license: BSD-3-Clause
@@ -48,8 +45,4 @@ about:
     - ${{ PREFIX }}/lib/R/share/licenses/BSD_3_clause
     - LICENCE
   homepage: https://github.com/jonclayden/shades
-
-extra:
-  recipe-maintainers:
-    - conda-forge/r
 
